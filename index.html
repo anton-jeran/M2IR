@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="An end-to-end impulse response generator for complex 3D indoor scenes.">
+  <meta name="keywords" content="impulse response, 3D envrionment, hybrid method">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MESH2IR: Neural Acoustic Impulse Response Generator for Complex 3D Scenes </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBHPZN38ZP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-FBHPZN38ZP');
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./data/css/bulma.min.css">
+  <link rel="stylesheet" href="./data/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./data/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./data/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./data/css/index.css">
+  <link rel="icon" href="./data/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./data/js/fontawesome.all.min.js"></script>
+  <!-- <script src="./data/js/bulma-carousel.min.js"></script> -->
+  <!-- <script src="./data/js/bulma-slider.min.js"></script> -->
+  <!-- <script src="./data/js/index.js"></script> -->
+
+  <style>
+    table {
+      border-collapse: separate;
+      text-indent: initial;
+    }
+    td {
+      display: table-cell;
+      vertical-align: inherit;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  </style>
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-widescreen">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MESH2IR: Neural Acoustic Impulse Response Generator for Complex 3D Scenes</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://anton-jeran.github.io/antonjeran.github.io/">Anton Jeran Ratnarajah, </a></span>
+            <span class="author-block">
+              <a href="https://royjames.github.io/zhy/">Zhenyu Tang, </a></span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/rohith-aralikatti/">Rohith Chandrashekar Aralikatti, </a></span>
+            <span class="author-block">
+              <a href="https://www.cs.umd.edu/people/dmanocha">Dinesh Manocha</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"> University of Maryland, College Park, USA</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/anton-jeran/MESH2IR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+           <!--    <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                </a> -->
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-widescreen">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose a mesh-based neural network (MESH2IR) to generate acoustic impulse responses (IRs) for indoor 3D scenes represented using a mesh.  The IRs are used to create a high-quality sound experience in interactive applications and audio processing. Our method can handle input triangular meshes with arbitrary topologies (2K - 3M triangles). We present a novel training technique to train MESH2IR using energy decay relief and highlight its benefits. We also show that training MESH2IR on IRs preprocessed using our proposed technique significantly improves the accuracy of IR generation. We reduce the non-linearity in the mesh space by transforming 3D scene meshes to latent space using a graph convolution network. Our MESH2IR is more than 200 times faster than a geometric acoustic algorithm on a CPU and can generate more than 10,000 IRs per second on an NVIDIA GeForce RTX 2080 Ti GPU for a given furnished indoor 3D scene. The acoustic metrics are used to characterize the acoustic environment. We show that the acoustic metrics of the IRs predicted from our MESH2IR match the ground truth with less than 10\% error. We also highlight the benefits of MESH2IR on audio and speech processing applications such as speech dereverberation and speech separation. To the best of our knowledge, ours is the first neural-network-based approach to predict IRs from a given 3D scene mesh in real-time.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-widescreen">
+        <h2 class="title is-3">Overall Architecture</h2>
+          <div align="center">
+            <img  width=80% style="max-width:100%;max-height:100%" class="img-responsive" src="data/full_archi.svg" alt="">
+            <p>
+              The architecture of our MESH2IR. Our mesh encoder network encodes a indoor 3D scene mesh to the latent space. The mesh latent vector and the source and listener locations are combined to produce a scene vector embedding. The generator network generates an IR corresponding to the input scene vector embedding. For the given scene vector embedding, the discriminator network discriminates between the generated IR and the ground truth IR during training.
+            </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-widescreen">
+        <h2 class="title is-3">Expansion of Mesh Encoder Network</h2>
+          <div align="center">
+            <img  width=80% style="max-width:100%;max-height:100%" class="img-responsive" src="data/mesh_net.svg" alt="">
+            <p>
+              The expansion of our mesh encoder in the <b>Overall Architecture</b>. Our encoder network transforms the indoor 3D scene mesh into a latent vector. The topology information (edge connectivity) and the node features (vertex coordinates) are extracted from the mesh and passed to our graph neural network.}            </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3">Neural Sound Rendering</h2>
+    <div class="container is-widescreen">
+        <h2 class="title is-3">Scenario 1</h2>
+        <h4 class="title is-4"> A person sings inside a bedroom and the listener moves around the house. The sound source (i.e., song) is represented using a red sphere. </h4>
+          <div align="center">
+            <iframe width="1020" height="660" src="https://www.youtube.com/embed/iu2tbnDr3Ro" frameborder="0" allowfullscreen></iframe>
+            <p>
+                       </p>
+    </div>
+  </div> 
+      <div class="container is-widescreen">
+        <h2 class="title is-3">Scenario 2</h2>
+        <h4 class="title is-4"> In this example, the phone rings in the bedroom and we play the piano in the living room. We move the listener around the house. The sound sources (i.e., ring and piano) are represented using a red sphere.  </h4>
+          <div align="center">
+            <iframe width="1020" height="660" src="https://www.youtube.com/embed/E5jZfMO8O_k" frameborder="0" allowfullscreen></iframe>
+            <p>
+                       </p>
+    </div>
+  </div> 
+      <div class="container is-widescreen">
+        <h2 class="title is-3">Scenario 3</h2>
+        <h4 class="title is-4"> In this example, a person speaks in the hall and a machine works inside a room. We move the listener around the house. The sound sources (i.e., speech and machine) are represented using a red sphere.  </h4>
+          <div align="center">
+            <iframe width="1020" height="660" src="https://www.youtube.com/embed/lwfAPKpJ7I0" frameborder="0" allowfullscreen></iframe>
+            <p>
+                       </p>
+    </div>
+  </div> 
+  </div>
+</section>
+
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{oorloff2022encodeinstyle,
+      title={Encode-in-Style: Latent-based Video Encoding using StyleGAN2},
+      author={Trevine Oorloff and Yaser Yaoob},
+      year={2022},
+      eprint={2203.14512},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+}</code></pre>
+  </div>
+</section> -->
+
+
+
+
+</body>
+</html>
