@@ -138,31 +138,6 @@
     <!--/ Abstract. -->
   </div>
 </section>
-
-
-<section class="section">
-  <div class="container is-widescreen">
-        <h2 class="title is-3">Overall Architecture</h2>
-          <div align="center">
-            <img  width=80% style="max-width:100%;max-height:100%" class="img-responsive" src="data/full_archi.svg" alt="">
-            <p>
-              The architecture of our MESH2IR. Our mesh encoder network encodes a indoor 3D scene mesh to the latent space. The mesh latent vector and the source and listener locations are combined to produce a scene vector embedding. The generator network generates an IR corresponding to the input scene vector embedding. For the given scene vector embedding, the discriminator network discriminates between the generated IR and the ground truth IR during training.
-            </p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-widescreen">
-        <h2 class="title is-3">Expansion of Mesh Encoder Network</h2>
-          <div align="center">
-            <img  width=80% style="max-width:100%;max-height:100%" class="img-responsive" src="data/mesh_net.svg" alt="">
-            <p>
-              The expansion of our mesh encoder in the <b>Overall Architecture</b>. Our encoder network transforms the indoor 3D scene mesh into a latent vector. The topology information (edge connectivity) and the node features (vertex coordinates) are extracted from the mesh and passed to our graph neural network.}            </p>
-    </div>
-  </div>
-</section>
-
 <section class="section">
   <div class="container is-widescreen">
     <h2 class="title is-3">Neural Sound Rendering</h2>
@@ -198,14 +173,41 @@
 
 
 
+
+<section class="section">
+  <div class="container is-widescreen">
+        <h2 class="title is-3">Overall Architecture</h2>
+          <div align="center">
+            <img  width=80% style="max-width:100%;max-height:100%" class="img-responsive" src="data/full_archi.svg" alt="">
+            <p>
+              The architecture of our MESH2IR. Our mesh encoder network encodes a indoor 3D scene mesh to the latent space. The mesh latent vector and the source and listener locations are combined to produce a scene vector embedding. The generator network generates an IR corresponding to the input scene vector embedding. For the given scene vector embedding, the discriminator network discriminates between the generated IR and the ground truth IR during training.
+            </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-widescreen">
+        <h2 class="title is-3">Expansion of Mesh Encoder Network</h2>
+          <div align="center">
+            <img  width=80% style="max-width:100%;max-height:100%" class="img-responsive" src="data/mesh_net.svg" alt="">
+            <p>
+              The expansion of our mesh encoder in the <b>Overall Architecture</b>. Our encoder network transforms the indoor 3D scene mesh into a latent vector. The topology information (edge connectivity) and the node features (vertex coordinates) are extracted from the mesh and passed to our graph neural network.}            </p>
+    </div>
+  </div>
+</section>
+
+
 <section class="section" id="BibTeX">
   <div class="container is-widescreen content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{ratnarajah2022mesh2ir,
+  @article{ratnarajah2022mesh2ir,
   title={MESH2IR: Neural Acoustic Impulse Response Generator for Complex 3D Scenes},
-  author={Anton Ratnarajah and Zhenyu Tang and Rohith Chandrashekar Aralikatti and Dinesh Manocha},
+  author={Ratnarajah, Anton and Tang, Zhenyu and Aralikatti, Rohith Chandrashekar and Manocha, Dinesh},
   journal={arXiv preprint arXiv:2205.09248},
   year={2022}
+}
 }</code></pre>
   </div>
 </section>
